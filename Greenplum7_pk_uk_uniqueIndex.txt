@@ -1,4 +1,4 @@
-Greenplum 7에서 압축 테이블 Unique 보장
+Greenplum 7에서 압축 테이블 Unique 지원
 
 - Greenplum 7에서는 압축 테이블에 PK, UK, UNIQUE INDEX 지원
 - Greenplum 6이하 버전에서는 압축 테이블에 PK, UK, UNIQUE INDEX 미지원
