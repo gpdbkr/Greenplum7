@@ -104,8 +104,7 @@ public |order_log_p2004|FOR VALUES FROM ('2004-01-01') TO ('2005-01-01')|true   
 public |order_log_p2005|FOR VALUES FROM ('2005-01-01') TO ('2006-01-01')|true          |{compresstype=zstd,compresslevel=7,blocksize=32768,checksum=true}|
 
 
--- 테이블명_1_prt_파티션명 --> Greenplum 6의 파티션 자동생성시 네이밍룰 
--- _1_prt_ ==> 첫번째 파티션
+-- Greenplum 7에서만 지원되는 형태, 파티션 테이블임을 선언만 하고, 개별적으로 파티션 만듬. 
 DROP TABLE IF EXISTS public.order_log;
 CREATE TABLE public.order_log
 (
@@ -119,7 +118,8 @@ DISTRIBUTED BY (order_no)
 PARTITION BY RANGE (order_date)
 ;
 
--- 파티션 명을 테이블+파티션명으로 했을 경우 
+-- 파티션 명을 [테이블명][_1_prt_][파티션명]으로 할 경우, 파티션 테이블 한번에 생성할 때의 파티션명과 동일
+-- _1_prt_ ==> 첫번째 파티션
 CREATE TABLE public.order_log_1_prt_p2001 PARTITION OF public.order_log FOR VALUES FROM ('2001-01-01'::date) TO ('2002-01-01'::date) WITH (appendonly=FALSE);
 CREATE TABLE public.order_log_1_prt_p2002 PARTITION OF public.order_log FOR VALUES FROM ('2002-01-01'::date) TO ('2003-01-01'::date) WITH (appendonly=TRUE, compresstype=zstd, compresslevel=1);
 CREATE TABLE public.order_log_1_prt_p2003 PARTITION OF public.order_log FOR VALUES FROM ('2003-01-01'::date) TO ('2004-01-01'::date) WITH (appendonly=TRUE, compresstype=zstd, compresslevel=2);
