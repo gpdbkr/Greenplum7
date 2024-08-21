@@ -1,8 +1,8 @@
 # Greenplum 7 개선 
-- Greenplum 7은 기존 PostgreSQL엔진 9.6에서 12로 업그레이드
-- Greenplum 6 Core 엔진 : PostgreSQL 9.6
-- Greenplum 7 Core 엔진 : PostgreSQL 12
-- Greenplum 8 Core 엔진 : 현재까지 계획은 PostgreSQL 15+
+- Greenplum 7은 기존 core PostgreSQL엔진을 9.6에서 12로 업그레이드
+- Greenplum 6 core 엔진 : PostgreSQL 9.6
+- Greenplum 7 core 엔진 : PostgreSQL 12
+- Greenplum 8 core 엔진 : 현재까지 계획은 PostgreSQL 15+
 
 
 ## 성능 개선
