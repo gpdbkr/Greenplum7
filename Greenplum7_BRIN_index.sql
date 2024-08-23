@@ -45,9 +45,9 @@ brin idx(pages_per_range=4) |          |         |  0.08sec  | 8.2sec|    6.6MB 
                             |(sys_dt)  | order_dt | sys_dt   | 생성시간 | zstd 7 압축 |     (비압축)    |
 ----------------------------|----------|---------|-----------|-------|------------|----------------|
 NO INDEX                    |  6.71sec | 0.59sec |           |       |    6.6MB   |                |
-btree idx                   |          |         |   6.8sec  |20.0sec|    6.6MB   |      90.0MB    |
-brin idx(default)           |          |         |   6.7sec  | 8.3sec|    6.6MB   |       1.5MB    |
-brin idx(pages_per_range=4) |          |         |   6.9sec  | 8.2sec|    6.6MB   |       1.5MB    |
+btree idx                   |          |         |미사용(6.8s) |20.0sec|    6.6MB   |      90.0MB    |
+brin idx(default)           |          |         |미사용(6.7s) | 8.3sec|    6.6MB   |       1.5MB    |
+brin idx(pages_per_range=4) |          |         |미사용(6.9s) | 8.2sec|    6.6MB   |       1.5MB    |
 ----------------------------------------------------------------------------------------------------
 
 
