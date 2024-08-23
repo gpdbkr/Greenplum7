@@ -9,7 +9,7 @@
 - JIT 컴파일 지원: 쿼리 플랜을 기계어로 컴파일 후 쿼리 수행
 - 정렬 속도 개선: varchar, text, numeric 컬럼 정렬 속도 개선
 - Index only scan : heap 테이블에 인덱스 온리 스캔 지원, Covering index 지원
-- BRIN/Hasg 인덱스 지원 
+- BRIN/Hash 인덱스 지원 
 - 워크로드 관리 : Resource Group v2 지원, Disk IO 컨트롤
 
 ## 개발 생산성 
